@@ -1,0 +1,17 @@
+name: Scheduled Task
+
+on:
+  schedule:
+    - cron: '15 17 * * *'  # Runs every day at 5:15 PM UTC
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Run Your Task
+        run: |
+          # Add your task execution command here
